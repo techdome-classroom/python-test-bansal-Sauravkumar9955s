@@ -1,7 +1,6 @@
 def romanToInt(s: str) -> int:
     
     roman_map = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    
     n = len(s)
    
     num = roman_map[s[n - 1]]
@@ -13,3 +12,11 @@ def romanToInt(s: str) -> int:
         else:
             num -= roman_map[s[i]]
     return num
+
+
+if __name__ == '__main__':
+    print(romanToInt('III'))
+    print(romanToInt('IV'))
+    print(romanToInt('IX'))
+    print(romanToInt('LVIII'))
+    print(romanToInt('MCMXCIV'))
